@@ -1,0 +1,169 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url(/img/foto-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+body img {
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.estrutura {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header logo redes"
+    ". meio ."
+    ". meio .";
+  grid-template-rows: 150px 300px 100px;
+}
+
+.header {
+  grid-area: header;
+  padding: 30px;
+  justify-self: right;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 1.125em;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.header nav a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header li + li {
+  margin-left: 30px;
+}
+
+.logo {
+  grid-area: logo;
+  justify-self: center;
+  padding-top: 30px;
+}
+
+.logo img {
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  grid-area: redes;
+  padding: 30px 0px 30px 30px;
+  margin-left: 50px;
+}
+
+.reserve {
+  padding: 10px;
+  color: white;
+  font-size: 1.125em;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  transition: 0.1s;
+  height: min-content;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  border: solid 1px #f28379;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.reserve:hover {
+  background: rgba(0, 0, 0, 1);
+  border: solid 1px #f28379;
+  color: #f28379;
+}
+
+.redes ul {
+  display: flex;
+}
+
+.redes ul li {
+  margin: 12px 10px;
+}
+
+.redes img {
+  max-width: 50px;
+  background: rgba(250, 127, 114, 0.6);
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+.redes img:hover {
+  background: rgba(250, 127, 114, 1);
+}
+
+.meio {
+  grid-area: meio;
+  align-self: center;
+  text-align: center;
+}
+
+.meio h1 {
+  font-weight: bold;
+  font-size: 4em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  color: #f28379;
+}
+.meio p {
+  padding: 5px;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  background: rgba(250, 127, 114, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  font-weight: normal;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(250, 127, 114, 1);
+  border: 1px solid black;
+  color: black;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  margin-top: 150px;
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.1);
+}
